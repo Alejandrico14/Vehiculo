@@ -1,0 +1,133 @@
+# Vehiculo
+package cosas.de.la.escuela;
+
+public class Chasis {
+    private int resistencia;
+    private String tamaño;
+    private String volante;
+
+    public Chasis(int resistencia, String tamaño, String volante) {
+        this.resistencia = resistencia;
+        this.tamaño = tamaño;
+        this.volante = volante;
+    }
+
+    public int getResistencia() {
+        return resistencia;
+    }
+
+    public String getTamaño() {
+        return tamaño;
+    }
+
+    public String getVolante() {
+        return volante;
+    }
+    public class Llanta extends Motor {
+    private float diametro;
+    private int Ndellantas;
+    private int tenacidad;
+    public Llanta(int revoluciones, int potencia,int resistencia, String tamaño, String volante){
+        super(revoluciones, potencia,resistencia,tamaño,volante);
+    }
+
+    public Llanta(float diametro, int Ndellantas, int tenacidad, int resistencia, String tamaño, String volante) {
+        super(resistencia, tamaño, volante);
+        this.diametro = diametro;
+        this.Ndellantas = Ndellantas;
+        this.tenacidad = tenacidad;
+    }
+
+    public Llanta(float diametro, int Ndellantas, int tenacidad, int revoluciones, int potencia, int resistencia, String tamaño, String volante) {
+        super(revoluciones, potencia, resistencia, tamaño, volante);
+        this.diametro = diametro;
+        this.Ndellantas = Ndellantas;
+        this.tenacidad = tenacidad;
+    }
+
+    public float getDiametro() {
+        return diametro;
+    }
+
+    public int getNdellantas() {
+        return Ndellantas;
+    }
+
+    public int getTenacidad() {
+        return tenacidad;
+    }
+    
+    }
+public class Motor extends Chasis{
+    private int revoluciones;
+    private int potencia;
+    
+
+    public Motor (int resistencia, String tamaño, String volante){
+        super(resistencia, tamaño, volante);
+        
+        
+     
+    }
+
+    public Motor(int revoluciones, int potencia, int resistencia, String tamaño, String volante) {
+        super(resistencia, tamaño, volante);
+        this.revoluciones = revoluciones;
+        this.potencia = potencia;
+    
+    }
+
+    public int getRevoluciones() {
+        return revoluciones;
+    }
+
+    public int getPotencia() {
+        return potencia;
+    }
+    }
+      public class Vehiculo extends Llanta{
+              private int matricula;
+              private float kilometros;
+
+    /**
+     *
+     * @param diametro
+     * @param Ndellantas
+     * @param tenacidad
+     * @param revoluciones
+     * @param potencia
+     * @param resistencia
+     * @param tamaño
+     * @param volante
+     */
+    public Vehiculo(float diametro, int Ndellantas, int tenacidad, int revoluciones, int potencia,int resistencia, String tamaño, String volante){   
+       
+        super(diametro,Ndellantas,tenacidad,revoluciones,potencia,resistencia,tamaño,volante);
+        this.kilometros = kilometros;
+        this.matricula = matricula;
+        
+    }
+
+   
+    public void mostrarDatos(){
+        System.out.println("Diametro de las llantas"+getDiametro()+
+                "\nNumero de Llantas"+getNdellantas()+"\nLa resistencia de las Llantas"+getTenacidad()+"\nLas revoluciones por segundo son"+getRevoluciones()+"\nLa potencia es"+getPotencia()+"\nPodemos aguantar"+getResistencia()+
+                        "\nNuestro coche es"+getTamaño()+"\nIra we,tenemos un volante"+getVolante()+"\nNuestra Matricula es"+matricula+"\nEl kilometraje es"+kilometros);
+    }      
+    }
+
+    public class Pruebaprincipal {
+     public static void main(String[] args){
+       
+         Vehiculo vehiculo = new Vehiculo((float) 20.9,3,8000,90,120,100000, "Grande"," rosa");
+         
+         vehiculo.mostrarDatos();
+         
+    }
+    
+    }
+
+
+    
+         
+}
