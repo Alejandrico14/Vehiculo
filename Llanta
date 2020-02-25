@@ -1,0 +1,38 @@
+package cosas.de.la.escuela;
+
+
+public class Llanta extends Motor {
+    private float diametro;
+    private int Ndellantas;
+    private int tenacidad;
+    public Llanta(int revoluciones, int potencia,int resistencia, String tamaño, String volante){
+        super(revoluciones, potencia,resistencia,tamaño,volante);
+    }
+
+    public Llanta(float diametro, int Ndellantas, int tenacidad, int resistencia, String tamaño, String volante) {
+        super(resistencia, tamaño, volante);
+        this.diametro = diametro;
+        this.Ndellantas = Ndellantas;
+        this.tenacidad = tenacidad;
+    }
+
+    public Llanta(float diametro, int Ndellantas, int tenacidad, int revoluciones, int potencia, int resistencia, String tamaño, String volante) {
+        super(revoluciones, potencia, resistencia, tamaño, volante);
+        this.diametro = diametro;
+        this.Ndellantas = Ndellantas;
+        this.tenacidad = tenacidad;
+    }
+
+    public float getDiametro() {
+        return diametro;
+    }
+
+    public int getNdellantas() {
+        return Ndellantas;
+    }
+
+    public int getTenacidad() {
+        return tenacidad;
+    }
+    
+    }
