@@ -23,6 +23,9 @@ public class Chasis {
     public String getVolante() {
         return volante;
     }
+   
+   //en otra pestaña del netbeans
+   
     public class Llanta extends Motor {
     private float diametro;
     private int Ndellantas;
@@ -37,6 +40,8 @@ public class Chasis {
         this.Ndellantas = Ndellantas;
         this.tenacidad = tenacidad;
     }
+    
+    //Entrando de nuevo a otra pestaña de Netbeans
 
     public Llanta(float diametro, int Ndellantas, int tenacidad, int revoluciones, int potencia, int resistencia, String tamaño, String volante) {
         super(revoluciones, potencia, resistencia, tamaño, volante);
@@ -58,6 +63,9 @@ public class Chasis {
     }
     
     }
+    
+    //Clase chasis
+    
 public class Motor extends Chasis{
     private int revoluciones;
     private int potencia;
@@ -85,6 +93,9 @@ public class Motor extends Chasis{
         return potencia;
     }
     }
+    
+    //Clase vehiculo
+    
       public class Vehiculo extends Llanta{
               private int matricula;
               private float kilometros;
