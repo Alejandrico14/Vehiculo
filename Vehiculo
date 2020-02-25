@@ -1,0 +1,35 @@
+package cosas.de.la.escuela;
+
+
+    public class Vehiculo extends Llanta{
+              private int matricula;
+              private float kilometros;
+
+    /**
+     *
+     * @param diametro
+     * @param Ndellantas
+     * @param tenacidad
+     * @param revoluciones
+     * @param potencia
+     * @param resistencia
+     * @param tamaño
+     * @param volante
+     */
+    public Vehiculo(float diametro, int Ndellantas, int tenacidad, int revoluciones, int potencia,int resistencia, String tamaño, String volante){   
+       
+        super(diametro,Ndellantas,tenacidad,revoluciones,potencia,resistencia,tamaño,volante);
+        this.kilometros = kilometros;
+        this.matricula = matricula;
+        
+    }
+
+   
+    public void mostrarDatos(){
+        System.out.println("Diametro de las llantas"+getDiametro()+
+                "\nNumero de Llantas"+getNdellantas()+"\nLa resistencia de las Llantas"+getTenacidad()+"\nLas revoluciones por segundo son"+getRevoluciones()+"\nLa potencia es"+getPotencia()+"\nPodemos aguantar"+getResistencia()+
+                        "\nNuestro coche es"+getTamaño()+"\nIra we,tenemos un volante"+getVolante()+"\nNuestra Matricula es"+matricula+"\nEl kilometraje es"+kilometros);
+    }      
+    }
+
+    
