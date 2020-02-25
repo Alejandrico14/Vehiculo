@@ -1,0 +1,30 @@
+package cosas.de.la.escuela;
+
+
+public class Motor extends Chasis{
+    private int revoluciones;
+    private int potencia;
+    
+
+    public Motor (int resistencia, String tamaño, String volante){
+        super(resistencia, tamaño, volante);
+        
+        
+     
+    }
+
+    public Motor(int revoluciones, int potencia, int resistencia, String tamaño, String volante) {
+        super(resistencia, tamaño, volante);
+        this.revoluciones = revoluciones;
+        this.potencia = potencia;
+    
+    }
+
+    public int getRevoluciones() {
+        return revoluciones;
+    }
+
+    public int getPotencia() {
+        return potencia;
+    }
+    }
