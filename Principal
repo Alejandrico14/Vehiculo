@@ -1,0 +1,13 @@
+package cosas.de.la.escuela;
+
+
+public class Pruebaprincipal {
+     public static void main(String[] args){
+       
+         Vehiculo vehiculo = new Vehiculo((float) 20.9, 3, 8000, 90, 120, 100000, " Grande"," rosa");
+         
+         vehiculo.mostrarDatos();
+         
+    }
+    
+    }
